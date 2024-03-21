@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        li {list-style: none;}
+
+        .lnb {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .lnb::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /* .lnb ul {overflow: hidden;} */
+        .lnb li {
+            width: 200px; height: 50px;
+            background-color: black; color: white;
+            text-align: center; line-height: 50px;
+            float: left;
+            cursor: pointer;
+        }
+
+       .lnb>ul>li:hover {background-color: #ccc; color: white;}
+        .lnb li li {display: none;}
+        /* .lnb li:hover li {display: block;} */
+        .lnb:hover li li {display: block;}
+        .lnb li li:hover {background-color: #ccc; color: white;}
+        
+
+    </style>
+</head>
+<body>
+
+    <nav class="lnb">
+        <ul>
+            <li>menu01
+                <ul>
+                    <li>menu01-1</li>
+                    <li>menu01-2</li>
+                    <li>menu01-3</li>
+                    <li>menu01-4</li>
+                    <li>menu01-5</li>
+                </ul>
+            </li><!--menu01-->
+        </ul>
+
+        <ul>
+            <li>menu02
+                <ul>
+                    <li>menu02-1</li>
+                    <li>menu02-2</li>
+                    <li>menu02-3</li>
+                    <li>menu02-4</li>
+                    <li>menu02-5</li>
+                </ul>
+            </li><!--menu02-->
+        </ul>
+
+        <ul>
+            <li>menu03
+                <ul>
+                    <li>menu03-1</li>
+                    <li>menu03-2</li>
+                    <li>menu03-3</li>
+                    <li>menu03-4</li>
+                    <li>menu03-5</li>
+                </ul>
+            </li><!--menu03-->
+        </ul>
+
+        <ul>
+            <li>menu04
+                <ul>
+                    <li>menu04-1</li>
+                    <li>menu04-2</li>
+                    <li>menu04-3</li>
+                    <li>menu04-4</li>
+                    <li>menu04-5</li>
+                </ul>
+            </li><!--menu04-->
+        </ul>
+
+        <ul>
+            <li>menu05
+                <ul>
+                    <li>menu05-1</li>
+                    <li>menu05-2</li>
+                    <li>menu05-3</li>
+                    <li>menu05-4</li>
+                    <li>menu05-5</li>
+                </ul>
+            </li><!--menu05-->
+        </ul>
+
+    </nav><!--nav-->
+    
+</body>
+</html>

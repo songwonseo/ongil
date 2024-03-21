@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wing_banner</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <style>
+        * {margin: 0; padding: 0;}
+        li {list-style: none;}
+
+        #wing {display: none;}
+        #wing:checked ~ .wing_box .close {display: block;}
+        #wing:checked ~ .wing_box .open {display: none;}
+        #wing ~ .wing_box .open {display: block;}
+        #wing ~ .wing_box .close {display: none;}
+
+        #wing:checked ~ .wing_box .wing_banner {display: block;}
+        #wing ~ .wing_box .wing_banner {display: none;}
+        
+        .wing_box {
+            /* width: 232px; height: 300px; */
+            position: absolute; top: 100px; right: 0;
+        }
+        .label {
+            width: 32px; height: 32px;
+            float: left;
+        }
+        .wing_banner {
+            width: 200px; height: 300px;
+            background-color: #ccc;
+            float: left;
+        }
+
+        .quick {position: fixed; top: 300px; right: 0; z-index: 1;}
+        .quick li {width: 160px; height: 40px;}
+        .quick ul li img {width: 100%; height: 100%;}
+
+
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="wing">
+    <aside class="wing_box">
+        <!-- <label for="wing" class="open"><img src="img/wopen_btn.png"></label>
+        <label for="wing" class="close"><img src="img/wclose_btn.png"></label> -->
+        <label for="wing" class="open"><i class="fas fa-moon"></i></label>
+        <label for="wing" class="close"><i class="fas fa-envelope"></i></label>
+        <div class="wing_banner">
+            wing_banner
+        </div>
+    </aside> 
+
+    <div class="quick">
+        <ul>
+            <li><img src="img/ongil_logo04.png"></li>
+        </ul>
+    </div>
+
+    
+    
+    
+</body>
+</html>

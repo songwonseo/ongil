@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-sclalable=no">
+    <title>노무법인온길</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link href="css/ongil.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        
+        $(function(){
+            $(".header_ex").each(function(){ //each: 반복적으로 실행하기 위해. 안 쓰면 f5를 눌러야 다시 재생됨
+                var win=$(window); //전역변수. each안에서는 또 쓸 수 있음
+                var lnb=$(".header_ex"); //$(this)
+                var target=lnb.offset().top; //lnb가 위에서 얼마나 떨어져 있는지 (400) target은 변수
+
+                win.on("scroll",function(){ //$(window)
+                    if(win.scrollTop()>target){ //window scroll 됐을 때 화면 제일 위의 값이 target보다 커질 때
+                        lnb.addClass("fix"); //fix라는 클래스를 추가
+                    } else {
+                        lnb.removeClass("fix"); //아니라면 삭제
+                    }
+                }); //scroll_event_fix
+
+                win.scroll(function(){
+                    if(win.scrollTop()>100){
+                        $(".top").fadeIn("fast");
+                    } else {
+                        $(".top").fadeOut("fast");
+                    }
+                }); //scroll_event_top
+
+                $(".top").click(function(){
+                    $("html,body").animate({scrollTop:0},500); //화면 전체에서 스크롤탑 제일 위로 0.5초 스르르
+                }); //top_move   
+            }); //each_function
+        }); //jQuery_function
+
+        $(document).ready(function(){
+          $('.slider').bxSlider({
+            auto: true, 
+            speed: 500, 
+            pause: 4000, 
+            mode:'horizontal'
+          });
+        }); //visual_slider
+
+    </script>
+</head>
+<body>
+
+    <nav class="gnb_ex">
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">SITEMAP</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <nav class="tab_gnb_ex">
+        <nav class="tab_gnb">
+            <ul>
+                <li><a href="#">SITEMAP</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <div class="header_ex">
+        <div class="header">
+            <div class="logo"><a href="#"><img src="img/logo.jpg"></a></div>
+            <nav class="lnb">
+                <ul>
+                    <li><a href="#">법인소개</a>
+                        <ul>
+                            <li><a href="#">법인소개01</a></li>
+                            <li><a href="#">법인소개02</a></li>
+                            <li><a href="#">법인소개03</a></li>
+                            <li><a href="#">법인소개04</a></li>  
+                        </ul>
+                    </li>
+                    <li><a href="#">업무분야</a>
+                        <ul>
+                            <li><a href="#">업무분야01</a></li>
+                            <li><a href="#">업무분야02</a></li>
+                            <li><a href="#">업무분야03</a></li>
+                            <li><a href="#">업무분야04</a></li>  
+                        </ul>
+                    </li>
+                    <li><a href="#">구성원</a>
+                        <ul>
+                            <li><a href="#">구성원01</a></li>
+                            <li><a href="#">구성원02</a></li>
+                            <li><a href="#">구성원03</a></li>
+                            <li><a href="#">구성원04</a></li>  
+                        </ul>
+                    </li>
+                    <li><a href="#">공지사항</a>
+                        <ul>
+                            <li><a href="#">공지사항01</a></li>
+                            <li><a href="#">공지사항02</a></li>
+                            <li><a href="#">공지사항03</a></li>
+                            <li><a href="#">공지사항04</a></li>  
+                        </ul>
+                    </li>
+                </ul>
+            </nav><!--lnb-->
+        </div>
+    </div>
+
+    <input type="checkbox" id="ham">
+    <nav class="menu_ex">
+        <nav class="menu">
+            <div class="logo"><a href="#"><img src="img/logo.jpg"></a></div>
+            <div class="ham">
+                <label for="ham"><i class="fas fa-bars"></i></label>
+            </div>
+            <div class="tab_lnb">
+                <ul>
+                    <li>법인소개</li>
+                    <li>업무분야</li>
+                    <li>구성원</li>
+                    <li>공지사항</li>
+                </ul>
+            </div>
+        </nav>
+    </nav>
+
+    <div class="top">top</div>
+
+    <div class="slider">
+        <a href="#"><img src="img/visual_main01.jpeg"></a>
+        <a href="#"><img src="img/visual_main02.jpeg"></a>
+        <a href="#"><img src="img/visual_main03.jpeg"></a>
+    </div>
+    
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+
+    <div>.</div>
+    <div>.</div>
+    <div>.</div>
+
+    <div>.</div>
+    <div>.</div>
+
+
+</body>
+</html>
